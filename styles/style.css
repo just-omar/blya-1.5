@@ -47,7 +47,7 @@ body {
 
 .link {
   display: inline-block;
-  background: url("/images/go.svg");
+  background: url("../images/go.svg");
   width: 40px;
   height: 40px;
   cursor: pointer;
