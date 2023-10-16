@@ -43,19 +43,19 @@ button.addEventListener("click", () => {
 addEventListener("resize", debounce(onResize, 20));
 
 function onResize() {
-  const mobile = window.matchMedia("(min-width: 320px) and (max-width:767px)");
-  const tablet = window.matchMedia("(min-width: 767px) and (max-width:1119px)");
-  const desktop = window.matchMedia("(min-width: 1119px)");
+  // const mobile = window.matchMedia("(min-width: 320px) and (max-width:767px)");
+  // const tablet = window.matchMedia("(min-width: 767px) and (max-width:1119px)");
+  // const desktop = window.matchMedia("(min-width: 1119px)");
   if (innerWidth > 700) {
     swiper.slideTo(0);
   }
-  if (mobile.matches) {
-    console.log("mobile");
-  } else if (tablet.matches) {
-    console.log("tablet");
-  } else if (desktop.matches) {
-    console.log("desktop");
-  }
+  // if (mobile.matches) {
+  //   console.log("mobile");
+  // } else if (tablet.matches) {
+  //   console.log("tablet");
+  // } else if (desktop.matches) {
+  //   console.log("desktop");
+  // }
 }
 
 function debounce(func, delay) {
