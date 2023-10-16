@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "TT Lakes", sans-serif;
+}
+
+.brand-block__title-wrapper {
+  text-transform: uppercase;
+  padding: 15px 16px;
+  background: linear-gradient(270deg, #fff 0%, #f8f8f8 100%);
+}
+.brand-block__title-text {
+  font-family: "TT Lakes", sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: #7e7e82;
+}
+.container {
+  padding: 2rem;
+}
+
+.grid-container {
+  display: flex;
+  /* БУДЕТ ВИДЕН ТОЛЬКО ПЕРВЫЙ СЛАЙД. */
+  /* ТАК НЕ ДЕЛАТЬ */
+
+  /* overflow: hidden; */
+}
+
+.grid-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  margin-top: 16px;
+
+  width: 240px;
+  height: 72px;
+}
+
+.link {
+  display: inline-block;
+  background: url("/images/go.svg");
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.btn-wrapper {
+  display: flex;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.btn-wrapper__expand {
+  align-self: flex-end;
+  top: 40px;
+  background: url("../images/expand.svg");
+  margin-top: 20px;
+  width: 18px;
+  height: 28px;
+
+  transition: transform 0.3s ease;
+}
+.btn-wrapper__hide-show {
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-items: center;
+
+  color: #1b1c21;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+
+  color: #7e7e82;
+}
+
+@media (max-width: 768px) {
+  .btn-wrapper__hide-show {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1120px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  /* .red:nth-child(-n + 6) {
+    background-color: red;
+  } */
+  .hide-tablet-items:nth-child(n + 7) {
+    display: none;
+  }
+  .show-tablet-items:nth-child(n + 7) {
+    display: flex;
+  }
+}
+@media (min-width: 1120px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  /* .green:nth-child(-n + 8) {
+    background-color: seagreen;
+  } */
+  .hide-desktop-items:nth-child(n + 9) {
+    display: none;
+  }
+  .show-desktop-items:nth-child(n + 9) {
+    display: flex;
+  }
+}

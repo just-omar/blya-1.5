@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brends</title>
+    <!-- Стили для свайпера -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- СПЕРВА СДН только потом свои стили, иначе перезапишутся -->
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/swiper.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="brand-block__title-wrapper">
+      <h1 class="brand-block__title-text">Ремонт техники различных брендов</h1>
+    </div>
+    <div class="container">
+      <div class="swiper">
+        <div class="grid-container swiper-wrapper">
+          <!-- 
+            <div class="grid-item swiper-slide">Item 1</div>
+          -->
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="btn-wrapper">
+          <div class="btn-wrapper__expand"></div>
+          <button class="btn-wrapper__hide-show content-hidden">
+            Показать все
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="./scripts/generate-data.js" type="module"></script>
+    <script src="./scripts/swiper.js" type="module"></script>
+    <script src="./scripts/index.js" type="module"></script>
+  </body>
+</html>
